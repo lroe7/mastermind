@@ -1,3 +1,6 @@
+//Lauren Roe
+//This is my own work
+
 #ifndef GAME_H
 #define GAME_H
 

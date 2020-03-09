@@ -1,3 +1,6 @@
+//Lauren Roe
+//This is my own work
+
 #ifndef GUESS_H
 #define GUESS_H
 
@@ -38,13 +41,46 @@ bool Guess::isValid(int num)
 void Guess::setGuess(int g1, int g2, int g3, int g4)
 {
 	if (isValid(g1)) aGuess[0] = g1;
-	else cout << "The first element of your guess is not a valid guess" << endl;
+	else
+	{
+		while (isValid(g1) == false)
+		{
+			cout << "The first element of your guess is not a valid guess, please enter a valid guess" << endl;
+			cin >> g1;
+		}
+		aGuess[0] = g1;
+	}
 	if (isValid(g2)) aGuess[1] = g2;
-	else cout << "The second element of your guess is not a valid guess" << endl;
+	else
+	{
+		while (isValid(g2) == false)
+		{
+			cout << "The second element of your guess is not a valid guess , please enter a valid guess" << endl;
+			cin >> g2;
+		}
+		aGuess[0] = g2;
+	}
 	if (isValid(g3)) aGuess[2] = g3;
-	else cout << "The third element of your guess is not a valid guess" << endl;
+	else
+	{
+		while (isValid(g3) == false)
+		{
+			cout << "The third element of your guess is not a valid guess , please enter a valid guess" << endl;
+			cin >> g3;
+		}
+		aGuess[0] = g3;
+	}
 	if (isValid(g4)) aGuess[3] = g4;
-	else cout << "The fourth element of your guess is not a valid guess" << endl;
+	else
+	{
+		while (isValid(g4) == false)
+		{
+			cout << "The fourth element of your guess is not a valid guess , please enter a valid guess" << endl;
+			cin >> g4;
+		}
+		aGuess[0] = g4; 
+
+	}
 }
 //sets the secret code to a random number 0-5
 void Guess::secretCode()
